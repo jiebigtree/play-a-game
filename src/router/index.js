@@ -1,12 +1,18 @@
 import Vue from "vue";
 import VueRouter from "vue-router";
+import barbecue from "./barbecue/barbecue";
+import dished from "./dishes/dishes";
+import hotpot from "./hotpot/hotpot";
 
 Vue.use(VueRouter);
 
 const routes = [
+  ...barbecue,
+  ...dished,
+  ...hotpot,
   {
     path: "/",
-    name: "Home",
+    name: "dishes-list",
     component: () => import("../views/dishes")
   },
   {
@@ -17,7 +23,7 @@ const routes = [
   {
     path: "/hotpot",
     name: "hotpot",
-    component: () => import("../views/hotPot")
+    component: () => import("../views/hotpot")
   }
 ];
 

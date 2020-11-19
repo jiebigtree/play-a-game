@@ -1,6 +1,6 @@
 <template>
   <div>
-    <h1>肉肉肉</h1>
+    <h1>东北菜</h1>
   </div>
 </template>
 <script>
