@@ -1,9 +1,11 @@
 <template>
   <div id="app">
     <router-view />
-    <router-link to="/">炒菜</router-link> |
-    <router-link to="/hotpot">火锅</router-link> |
-    <router-link to="/barbecue">烤肉</router-link>
+    <div class="nav-bar" v-show="$route.meta.navShow">
+      <router-link to="/">炒菜</router-link> |
+      <router-link to="/hotpot">火锅</router-link> |
+      <router-link to="/barbecue">烤肉</router-link>
+    </div>
   </div>
 </template>
 

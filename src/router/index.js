@@ -12,18 +12,26 @@ const routes = [
   ...hotpot,
   {
     path: "/",
-    name: "dishes-list",
+    redirect: "/dishes",
     component: () => import("../views/dishes")
+  },
+  {
+    path: "/dishes",
+    name: "dishes",
+    component: () => import("../views/dishes"),
+    meta: { navShow: true }
   },
   {
     path: "/barbecue",
     name: "barbecue",
-    component: () => import("../views/barbecue")
+    component: () => import("../views/barbecue"),
+    meta: { navShow: true }
   },
   {
     path: "/hotpot",
     name: "hotpot",
-    component: () => import("../views/hotpot")
+    component: () => import("../views/hotpot"),
+    meta: { navShow: true }
   }
 ];
 
