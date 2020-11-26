@@ -1,5 +1,6 @@
 <template>
   <div>
+    <button @click="back">返回</button>
     <h1>底料</h1>
   </div>
 </template>
@@ -8,6 +9,10 @@ export default {
   data() {
     return {};
   },
-  methods: {}
+  methods: {
+    back() {
+      this.$router.back();
+    }
+  }
 };
 </script>

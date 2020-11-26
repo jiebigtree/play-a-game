@@ -16,6 +16,9 @@ export default {
         name: "dishes-list"
       });
     }
+  },
+  render() {
+    return <span>Hello</span>;
   }
 };
 </script>
