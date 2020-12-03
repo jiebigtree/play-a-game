@@ -9,6 +9,8 @@
     <button @click="testStoreSetter">测试store存值</button>
     <button @click="testStoreGetter">测试store取值</button>
     <hello></hello>
+    <button @click="testObjFunc">testFunc</button>
+    <button @click="sayHello">say hello</button>
   </div>
 </template>
 <script>
@@ -22,7 +24,12 @@ export default {
       changeFooIndex: 0,
       fooValueArray: ["left", "right", "bottom", "top"],
       fooValue: 200,
-      changeFoo: "left"
+      changeFoo: "left",
+      saySomething: {
+        sayHello() {
+          alert("hello");
+        }
+      }
     };
   },
   created() {
@@ -59,6 +66,14 @@ export default {
     testStoreGetter() {
       console.log(JSON.stringify(this.$store.getters.getHeadInfo));
       console.log(JSON.stringify(this.$store.state.headInfo));
+    },
+    testObjFunc() {
+      let user = {};
+      user.func = this.test;
+      user.func();
+    },
+    sayHello() {
+      this.saySomething.sayHello();
     }
   },
   directives: {
