@@ -61,11 +61,11 @@ export default {
     },
     testStoreSetter() {
       this.$store.commit("setHeadInfo", { name: "jay" });
-      console.log(this.$store.state.headInfo);
+      this.$store.commit("setLineInfo", { age: 99 });
     },
     testStoreGetter() {
       console.log(JSON.stringify(this.$store.getters.getHeadInfo));
-      console.log(JSON.stringify(this.$store.state.headInfo));
+      console.log(JSON.stringify(this.$store.state.lineInfo));
     },
     testObjFunc() {
       let user = {};

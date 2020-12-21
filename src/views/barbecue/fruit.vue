@@ -3,25 +3,25 @@
     <div>
       <button @click="back">返回</button>
     </div>
-    <h1>肉肉肉</h1>
-    <input type="text" v-model="firstPage" />
-    <div>{{ firstPage }}</div>
-    <button @click="toFruit">去水果</button>
+    <h1>水果</h1>
+    <input type="text" v-model="secondPage" />
+    <div>{{ secondPage }}</div>
+    <button @click="toNextPage">去蔬菜</button>
   </div>
 </template>
 <script>
 export default {
   data() {
     return {
-      firstPage: ""
+      secondPage: ""
     };
   },
   methods: {
     back() {
       this.$router.back();
     },
-    toFruit() {
-      this.$router.push({ name: "fruit-list" });
+    toNextPage() {
+      this.$router.push({ name: "vegetable-list" });
     }
   }
 };

@@ -3,19 +3,25 @@ import Vuex from "vuex";
 
 Vue.use(Vuex);
 
+import aState from "./states/aState";
+import bState from "./states/bState";
+import aMutations from "./mutations/aMutation";
+import bMutations from "./mutations/bMutation";
+import aGetters from "./getters/aGetter";
+import bGetters from "./getters/bGetter";
+
 export default new Vuex.Store({
   state: {
-    headInfo: {}
+    ...aState,
+    ...bState
   },
   mutations: {
-    setHeadInfo(state, headInfo) {
-      state.headInfo = headInfo;
-    }
+    ...aMutations,
+    ...bMutations
   },
   getters: {
-    getHeadInfo(state) {
-      return state.headInfo;
-    }
+    ...aGetters,
+    ...bGetters
   },
   actions: {},
   modules: {}

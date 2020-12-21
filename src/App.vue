@@ -1,6 +1,9 @@
 <template>
   <div id="app">
-    <router-view />
+    <keep-alive>
+      <router-view v-if="$route.meta.keepAlive" />
+    </keep-alive>
+    <router-view v-if="!$route.meta.keepAlive" />
     <div class="nav-bar" v-show="$route.meta.navShow">
       <router-link to="/">炒菜</router-link> |
       <router-link to="/hotpot">火锅</router-link> |
